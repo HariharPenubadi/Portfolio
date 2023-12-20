@@ -1,0 +1,232 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins',sans-serif;
+background-color: rgb(15, 15, 15);
+}
+.header{
+    position: fixed;
+    top:50px;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a{
+    position: relative;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    padding-left: 40px;
+    font-weight: 500;
+    transition: 0.3s;
+    letter-spacing: 5px;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: rgb(157, 157, 157);
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1s ease forwards;
+    animation-delay: .5s;
+}
+.home{
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.photo {
+    margin-top:150px ;
+    position: absolute;
+    height: 60vh;
+    margin-left: 850px;
+    background: rgb(15, 15, 15);
+    display: flex;
+  }
+.home-imgHover{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 284px;
+    height: 430px;
+    background: transparent;
+    transition: .5s;
+}
+
+.home-imgHover:hover{
+    background-color:rgb(15, 15, 15);
+    opacity: .8;
+}
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 3s ease forwards;
+    animation-delay: .5s;
+}
+.home-content h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(106, 106, 106);
+    position: relative;
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1.5s ease forwards;
+    animation-delay: .5s;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(227, 226, 226);
+    position: relative;
+}
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 1.1s;
+}
+.home-content p{
+    font-size: 16px;
+    color:rgb(106, 106, 106);
+    margin: 20px 0 40px;
+    position: relative;
+}
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 1.4s;
+}
+.home-content .btn{
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.home-content .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 1.7s;
+    z-index:2 ;
+}
+.btn a{
+    position: relative;
+    justify-content:center ;
+    align-items: center;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    background:transparent;
+    border: 2px solid rgb(106, 106, 106);
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 550;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(106, 106, 106);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn a:hover::before{
+    width: 100%;
+}
+.home-content{
+    position: relative;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 30px;
+    bottom: -5px;
+    width: 120px;
+    height: 2px;
+    background:white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.navbar a:hover::after{
+    transform-origin: left;
+    transform:scaleX(1);
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
